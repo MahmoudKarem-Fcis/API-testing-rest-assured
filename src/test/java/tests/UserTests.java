@@ -30,7 +30,7 @@ public class UserTests {
                 .given()
                 .header("Content-Type", "application/json").header("x-api-key","reqres-free-v1")  //this header is used for solving 401 authorization error
                 .body(requestBody)
-                .post("/api/users");  //https://reqres.in/api/users
+                .post("/api/users");
 
         response.then().log().all();
         ApiUtils.validateStatusCode(response, 201);
